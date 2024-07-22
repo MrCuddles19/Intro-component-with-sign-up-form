@@ -167,6 +167,10 @@ body {
     background-color: hsl(154, 62%, 65%);
 }
 
+.button input:active {
+    transform: scale(.9);
+}
+
 .disclaimer {
     font-size: .7rem;
     text-align: center;
@@ -188,10 +192,6 @@ body {
     opacity: 1;
 }
 
-.visible {
-    display: block;
-}
-
 .modal {
     position: fixed;
     z-index: 9;
@@ -202,6 +202,8 @@ body {
     padding: .2rem 1rem;
     border: .3rem solid var(--Green);
     border-radius: 1rem;
+    display: none;
+    transition: all .4s ease;
 }
 
 .close {
@@ -227,6 +229,12 @@ body {
     font-size: 2rem;
     margin: .6rem 0rem 3rem 0;
 }
+
+.visible {
+    display: block;
+}
+
+
 
 @media (max-width: 430px) {
     .wrapper {
