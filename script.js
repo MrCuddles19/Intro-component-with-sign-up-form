@@ -1,5 +1,5 @@
 import { userDetails } from "./userdetails.js";
-
+const inputArea = document.querySelectorAll('.input-area');
 const firstNameContainer = document.querySelector('.first-name-container');
 const lastNameContainer = document.querySelector('.last-name-container');
 const emailContainer = document.querySelector('.email-container');
@@ -65,8 +65,11 @@ function validateEmail(email) {
 
     let isTrue = true;
 
+    let userID = '';
+
     if (userDetails.some(details => details.firstname === userFirstName)) {
-        isTrue = false
+        isTrue = false;
+        userID = userFirstName;
     } 
 
     if (userDetails.some(details => details.lastname === userLastName)) {
@@ -82,7 +85,7 @@ function validateEmail(email) {
   };
      
     if (!isTrue) {
-      alert('You have already have a free trial!');
+      alert(`Dear ${userID}, you have already have a free trial!`);
     }  else {
 
         let isValid = true;
@@ -91,6 +94,11 @@ function validateEmail(email) {
         firstNameContainer.classList.add('red');
         firstNameError.classList.add('visible');
         firstNameErrorIcon.classList.add('appear');
+        setTimeout(() => {
+         firstNameContainer.classList.remove('red');
+         firstNameError.classList.remove('visible');
+         firstNameErrorIcon.classList.remove('appear');
+        },4000)
         isValid = false;
        } else {
         firstNameContainer.classList.remove('red');
@@ -102,6 +110,11 @@ function validateEmail(email) {
         lastNameContainer.classList.add('red');
         lastNameError.classList.add('visible');
         lastNameErrorIcon.classList.add('appear');
+        setTimeout(() => {
+            lastNameContainer.classList.remove('red');
+            lastNameError.classList.remove('visible');
+            lastNameErrorIcon.classList.remove('appear');
+        },4000)
         isValid = false;
        } else {
         lastNameContainer.classList.remove('red');
@@ -113,6 +126,11 @@ function validateEmail(email) {
         emailContainer.classList.add('red');
         emailError.classList.add('visible');
         emailErrorIcon.classList.add('appear');
+        setTimeout(() => {
+            emailContainer.classList.remove('red');
+            emailError.classList.remove('visible');
+            emailErrorIcon.classList.remove('appear');    
+        },4000)
         isValid = false;
        } else {
         emailContainer.classList.remove('red');
@@ -124,6 +142,11 @@ function validateEmail(email) {
         passwordContainer.classList.add('red');
         passwordError.classList.add('visible');
         passwordErrorIcon.classList.add('appear');
+        setTimeout(() => {
+            passwordContainer.classList.remove('red');
+            passwordError.classList.remove('visible');
+            passwordErrorIcon.classList.remove('appear');
+        },4000)
         isValid = false;
        } else {
         passwordContainer.classList.remove('red');
@@ -140,7 +163,10 @@ function validateEmail(email) {
                             password: userPassword,
                             email: userEmail
                         }
-                    )
+                    );
+                    inputArea.forEach((area) => {
+                         area.classList.remove('blue');
+                    });
                 };
         }
     });
@@ -148,3 +174,23 @@ function validateEmail(email) {
 modalCloseButton.addEventListener('click', () => {
     modal.classList.remove('visible');
 }) 
+
+/*firstNameContainer.addEventListener('click', () => {
+    firstNameContainer.classList.add('blue');
+    setTimeout(() => {
+        firstNameContainer.classList.remove('blue');
+    }, 1500)
+})*/
+
+inputArea.forEach((area) => {
+     area.addEventListener('click', () => {
+        inputArea.forEach((area2) => {
+        area2.classList.remove('blue')
+       });
+   
+       area.classList.add('blue');
+       setTimeout(() => {
+           area.classList.remove('blue');
+       }, 8000);})
+    
+})
