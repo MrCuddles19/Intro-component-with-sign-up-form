@@ -53,6 +53,8 @@ body {
     color: #ffffff;
     max-width: 35rem;
     font-size: 3rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero p {
@@ -60,7 +62,7 @@ body {
 }
 
 .form-section {
-    flex: 1.4;
+    flex: 1.2;
 }
 
 .ad {
@@ -108,7 +110,7 @@ body {
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 8px 0px rgba(172, 73, 73, 0.5);
+    box-shadow: 0 10px 0px rgba(172, 73, 73, 0.5);
 }
 
 
