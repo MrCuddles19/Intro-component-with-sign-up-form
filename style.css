@@ -60,15 +60,15 @@ body {
 }
 
 .form-section {
-    flex: 1.1;
+    flex: 1.4;
 }
 
 .ad {
     color: #ffffff;
     background-color: var(--Blue);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    padding: .8rem;
+    padding: 1.5rem;
     border-radius: .8rem;
     position: relative;
     z-index: 2;
@@ -77,7 +77,7 @@ body {
 .ad::before {
     content: "";
     position: absolute;
-    background-color: rgb(209, 36, 36);
+    background-color: rgb(221, 61, 61);
     top: 0;
     left: 0;
     right: 0;
@@ -117,7 +117,7 @@ body {
     align-items: center;
     gap: 1rem;
     border: .005rem solid var(--Green);
-    padding: .7rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: .3rem;
 }
 
@@ -159,11 +159,11 @@ body {
     background-color: var(--Green);
     border: none;
     color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: .5rem;
+    padding: 1.2rem 2.2rem;
+    border-radius: .6rem;
     font-size: 1rem;
     text-transform: uppercase;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     letter-spacing: .1rem;
     transition: all .5s ease;
 }
