@@ -73,15 +73,18 @@ function validateEmail(email) {
     } 
 
     if (userDetails.some(details => details.lastname === userLastName)) {
-        isTrue = false
+        isTrue = false;
+        userID = userFirstName;
     };
 
     if (userDetails.some(details => details.email === userEmail)) {
-        isTrue = false
+        isTrue = false;
+        userID = userFirstName;
     };
     
     if (userDetails.some(details => details.password === userPassword)) {
-        isTrue = false
+        isTrue = false;
+        userID = userFirstName;
   };
      
     if (!isTrue) {
