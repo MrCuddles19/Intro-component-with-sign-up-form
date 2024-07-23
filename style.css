@@ -38,7 +38,7 @@ body {
     gap: 4rem;
     opacity: 0;
     transform: translateY(2cm);
-    animation: intro 2s ease forwards;
+    animation: intro 1.3s ease forwards;
 }
 
 .hero {
